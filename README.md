@@ -1,23 +1,21 @@
 # WhatsApp Demo For Text-Based Customer Service
 
-<img src="https://developer.nexmo.com/assets/images/Vonage_Nexmo.svg" height="48px" alt="Nexmo is now known as Vonage" />
+<img src="public/logo.png" height="150px" alt="Project Logo" />
 
 This is a basic demo app routing user enquiries to customer service people, all via WhatsApp
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
 ## Prerequisites
 
-* A Vonage account, [sign up for a new account here](https://dashboard.nexmo.com/sign-up?utm_source=DEV_REL&utm_medium=github&utm_campaign=text-based-whatsapp-callcenter) if you don't have one already
-* **EITHER** a WhatsApp Business number **OR** you can try this app using the [Messages API Sandbox](https://developer.nexmo.com/messages/concepts/messages-api-sandbox) - but only telephone numbers that you whitelist through the dashboard can be used. This makes the sandbox ideal for testing with a controlled group of numbers.
+* A Vonage account, [sign up for a new account here](https://vonage.nexmo.com/sign-up?utm_source=DEV_REL&utm_medium=github&utm_campaign=text-based-whatsapp-callcenter) if you don't have one already
+* **EITHER** a WhatsApp Business number **OR** you can try this app using the [Messages API Sandbox](https://developer.vonage.com/messages/concepts/messages-api-sandbox) - but only telephone numbers that you whitelist through the dashboard can be used. This makes the sandbox ideal for testing with a controlled group of numbers.
 * NodeJS and NPM
 * Redis
 
 ## Set up the application to run locally
 
-1. Create a messages application and set the incoming message and message status webhooks to point to `[APP URL]/webhooks/inbound` and `[APP URL]/webhooks/status` respectively. See also: [Creating a Messages API Application](https://developer.nexmo.com/messages/code-snippets/create-an-application)
+1. Create a messages application and set the incoming message and message status webhooks to point to `[APP URL]/webhooks/inbound` and `[APP URL]/webhooks/status` respectively. See also: [Creating a Messages API Application](https://developer.vonage.com/messages/code-snippets/create-an-application)
 2. If you are using the Messages Sandbox, then also configure the sandbox URLs for Messages to point to (the same URLs as used in the application) `[APP URL]/webhooks/inbound` and `[APP_URL]/webhooks/status` respectively.
-  - Your application must be publicly available. If running locally, you might find our [guide to using Ngrok for development](https://developer.nexmo.com/tools/ngrok) helpful.
+  - Your application must be publicly available. If running locally, you might find our [guide to using Ngrok for development](https://developer.vonage.com/tools/ngrok) helpful.
 3. Clone this repo, and run `npm install`
 4. Create a `.env` file (see variables below)
 5. Add your configuration values to the `.env` file, this will include the connection details for your Redis instance and your Vonage credentials including an application and private key. The private key should be pasted on one line with all newlines replaced with `\n`
